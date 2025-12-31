@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: SpringAopLearn
+server:
+  port: 8081
+
+logging:
+  file:
+    name: logs/application.log
+  pattern:
+    file: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p ${PID:- } --- [${spring.application.name}] [%t] %-40.40logger{39} : %m%n%wEx"
+  level:
+    root: INFO

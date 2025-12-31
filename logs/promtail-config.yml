@@ -1,0 +1,35 @@
+server:
+  http_listen_port: 9080
+  log_level: info
+
+positions:
+  filename: /tmp/positions.yaml
+
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+    batchwait: 10s
+    batchsize: 102400
+
+scrape_configs:
+  - job_name: spring-boot
+    static_configs:
+      - targets:
+          - localhost
+        labels:
+          job: spring-boot
+          __path__: /var/log/spring-boot/*.log
+
+    pipeline_stages:
+      # Parse ISO 8601 timestamp and extract log level
+      - regex:
+          expression: '^(?P<timestamp>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[.\d+:-]*)?\s*(?P<level>INFO|WARN|ERROR|DEBUG|TRACE)?'
+      
+      - labels:
+          level:
+      
+      - timestamp:
+          source: timestamp
+          format: RFC3339Nano
+          fallbacks:
+            - "2006-01-02T15:04:05.000Z07:00"
+            - "2006-01-02 15:04:05"

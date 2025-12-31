@@ -1,0 +1,411 @@
+2025-12-31 10:54:56 [main] INFO  c.e.s.SpringAopLearnApplication - Starting SpringAopLearnApplication using Java 17.0.9 with PID 77246 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+2025-12-31 10:54:56 [main] INFO  c.e.s.SpringAopLearnApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-31 10:54:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-12-31 10:54:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-31 10:54:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-31 10:54:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-31 10:54:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 441 ms
+2025-12-31 10:54:56 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-12-31 10:54:56 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-31 10:54:56 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-12-31T10:57:03.908+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 78429 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T10:57:03.909+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T10:57:04.272+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T10:57:04.277+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T10:57:04.277+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T10:57:04.296+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T10:57:04.296+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 373 ms
+-2025-12-31T10:57:04.337+08:00 ERROR 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] c.l.l.logback.LogbackConfigImporter      : Failed to import log configuration, invalid pattern: %d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p 78429 --- [%SpringAopLearn] [%t] %-40.40logger{39} : %m%n-%wEx
+-
+java.lang.IllegalArgumentException: log encoder pattern contains unsupported terms [pattern="%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p %processId --- [%SpringAopLearn] [%t] %-40.40logger{39} : %m%n-%wEx", term=KeyWord(SpringAopLearn,null) -> LITERAL(] [) -> KeyWord(t,null) -> LITERAL(] ) -> KeyWord(logger, FormatInfo(40, 40, false, true),[39]) -> LITERAL( : ) -> KeyWord(m,null) -> KeyWord(n,null) -> LITERAL(-) -> KeyWord(wEx,null)]
+	at com.logviewer.logLibs.logback.LogbackLogFormat.createNode(LogbackLogFormat.java:159) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.logLibs.logback.LogbackLogFormat.parseLayout(LogbackLogFormat.java:45) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.formats.AbstractPatternLogFormat.getDelegate(AbstractPatternLogFormat.java:163) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.formats.AbstractPatternLogFormat.validate(AbstractPatternLogFormat.java:192) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.logLibs.logback.LogbackConfigImporter.processAppender(LogbackConfigImporter.java:58) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.logLibs.logback.LogbackConfigImporter.get(LogbackConfigImporter.java:143) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.logLibs.logback.LogbackConfigImporter.get(LogbackConfigImporter.java:27) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.config.LogViewerAutoConfig.lambda$loadLogConfiguration$0(LogViewerAutoConfig.java:59) ~[log-viewer-1.0.10.jar:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+	at com.logviewer.config.LogViewerAutoConfig.loadLogConfiguration(LogViewerAutoConfig.java:58) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.config.LogViewerAutoConfig.getLogFormats(LogViewerAutoConfig.java:44) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.config.LogViewerAutoConfig.lvLogManager(LogViewerAutoConfig.java:69) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.config.LogViewerAutoConfig$$SpringCGLIB$$0.CGLIB$lvLogManager$0(<generated>) ~[log-viewer-1.0.10.jar:na]
+	at com.logviewer.config.LogViewerAutoConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[log-viewer-1.0.10.jar:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-6.2.0.jar:6.2.0]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:348) ~[spring-context-6.2.0.jar:6.2.0]
+	at com.logviewer.config.LogViewerAutoConfig$$SpringCGLIB$$0.lvLogManager(<generated>) ~[log-viewer-1.0.10.jar:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:88) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:168) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1351) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1181) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
+	at com.example.springaop.SpringAopLearnApplication.main(SpringAopLearnApplication.java:12) ~[main/:na]
+
+2025-12-31T10:57:04.463+08:00  WARN 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T10:57:04.469+08:00  INFO 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T10:57:04.474+08:00 ERROR 78429 --- [%PARSER_ERROR[SpringAopLearn]] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T10:57:17.281+08:00  INFO 78698 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 78698 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T10:57:17.282+08:00  INFO 78698 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T10:57:17.616+08:00  INFO 78698 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T10:57:17.620+08:00  INFO 78698 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T10:57:17.620+08:00  INFO 78698 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T10:57:17.638+08:00  INFO 78698 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T10:57:17.638+08:00  INFO 78698 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 341 ms
+-2025-12-31T10:57:17.787+08:00  WARN 78698 --- [SpringAopLearn] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T10:57:17.792+08:00  INFO 78698 --- [SpringAopLearn] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T10:57:17.797+08:00 ERROR 78698 --- [SpringAopLearn] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T10:59:39.159+08:00  INFO 79911 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 79911 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T10:59:39.160+08:00  INFO 79911 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T10:59:39.504+08:00  INFO 79911 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T10:59:39.509+08:00  INFO 79911 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T10:59:39.509+08:00  INFO 79911 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T10:59:39.531+08:00  INFO 79911 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T10:59:39.532+08:00  INFO 79911 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 356 ms
+-2025-12-31T10:59:39.688+08:00  INFO 79911 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T10:59:39.692+08:00  INFO 79911 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.714 seconds (process running for 0.823)
+-2025-12-31T11:02:48.579+08:00  INFO 79911 --- [SpringAopLearn] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2025-12-31T11:02:48.579+08:00  INFO 79911 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+-2025-12-31T11:02:48.581+08:00  INFO 79911 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+-2025-12-31T11:03:45.302+08:00  INFO 81928 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 81928 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T11:03:45.303+08:00  INFO 81928 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T11:03:45.658+08:00  INFO 81928 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T11:03:45.662+08:00  INFO 81928 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T11:03:45.663+08:00  INFO 81928 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T11:03:45.683+08:00  INFO 81928 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T11:03:45.683+08:00  INFO 81928 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 366 ms
+-2025-12-31T11:03:45.838+08:00  WARN 81928 --- [SpringAopLearn] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T11:03:45.844+08:00  INFO 81928 --- [SpringAopLearn] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T11:03:45.849+08:00 ERROR 81928 --- [SpringAopLearn] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T11:03:57.153+08:00  INFO 82140 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 82140 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T11:03:57.154+08:00  INFO 82140 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T11:03:57.493+08:00  INFO 82140 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T11:03:57.498+08:00  INFO 82140 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T11:03:57.499+08:00  INFO 82140 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T11:03:57.521+08:00  INFO 82140 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T11:03:57.521+08:00  INFO 82140 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+-2025-12-31T11:03:57.682+08:00  INFO 82140 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T11:03:57.685+08:00  INFO 82140 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.709 seconds (process running for 0.834)
+-2025-12-31T11:04:13.419+08:00  INFO 82140 --- [SpringAopLearn] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2025-12-31T11:04:13.419+08:00  INFO 82140 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+-2025-12-31T11:04:13.420+08:00  INFO 82140 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+-2025-12-31T11:08:32.366+08:00  INFO 82140 --- [SpringAopLearn] [http-nio-8081-exec-6] c.l.web.WebsocketEmulationController     : Connection opened [sessionId=93a30e02665ff42, user=<anonymous>]
+-2025-12-31T11:10:32.968+08:00  INFO 85367 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 85367 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T11:10:32.969+08:00  INFO 85367 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T11:10:33.308+08:00  INFO 85367 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T11:10:33.313+08:00  INFO 85367 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T11:10:33.313+08:00  INFO 85367 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T11:10:33.331+08:00  INFO 85367 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T11:10:33.332+08:00  INFO 85367 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 346 ms
+-2025-12-31T11:10:33.484+08:00  WARN 85367 --- [SpringAopLearn] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T11:10:33.489+08:00  INFO 85367 --- [SpringAopLearn] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T11:10:33.495+08:00 ERROR 85367 --- [SpringAopLearn] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T11:10:43.266+08:00  INFO 85540 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 85540 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T11:10:43.267+08:00  INFO 85540 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T11:10:43.591+08:00  INFO 85540 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T11:10:43.596+08:00  INFO 85540 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T11:10:43.596+08:00  INFO 85540 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T11:10:43.614+08:00  INFO 85540 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T11:10:43.614+08:00  INFO 85540 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 332 ms
+-2025-12-31T11:10:43.763+08:00  WARN 85540 --- [SpringAopLearn] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T11:10:43.768+08:00  INFO 85540 --- [SpringAopLearn] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T11:10:43.774+08:00 ERROR 85540 --- [SpringAopLearn] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T11:11:03.639+08:00  INFO 82140 --- [SpringAopLearn] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+-2025-12-31T11:11:09.474+08:00  INFO 86768 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 86768 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T11:11:09.475+08:00  INFO 86768 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T11:11:09.800+08:00  INFO 86768 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T11:11:09.805+08:00  INFO 86768 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T11:11:09.806+08:00  INFO 86768 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T11:11:09.823+08:00  INFO 86768 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T11:11:09.823+08:00  INFO 86768 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 334 ms
+-2025-12-31T11:11:09.975+08:00  INFO 86768 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T11:11:09.979+08:00  INFO 86768 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.672 seconds (process running for 0.786)
+-2025-12-31T11:11:13.183+08:00  INFO 82140 --- [SpringAopLearn] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+-2025-12-31T11:11:13.187+08:00  INFO 82140 --- [SpringAopLearn] [SpringApplicationShutdownHook] c.l.web.WebsocketEmulationController     : Connection closed [sessionId=93a30e02665ff42, user=<anonymous>, reason=application stopping]
+-2025-12-31T11:11:45.814+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2025-12-31T11:11:45.814+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+-2025-12-31T11:11:45.815+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+-2025-12-31T11:11:51.957+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-4] c.l.web.WebsocketEmulationController     : Connection opened [sessionId=e3b0e3ba4b854394, user=<anonymous>]
+-2025-12-31T11:12:57.906+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-6] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: getData
+-2025-12-31T11:12:57.908+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-6] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: getData took 3 ms
+-2025-12-31T11:13:13.466+08:00  WARN 86768 --- [SpringAopLearn] [http-nio-8081-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'input' for method parameter type String is not present]
+-2025-12-31T11:13:40.747+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-5] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: saveData
+-2025-12-31T11:13:40.747+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-5] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: saveData took 0 ms
+-2025-12-31T11:15:02.830+08:00  INFO 86768 --- [SpringAopLearn] [http-nio-8081-exec-8] c.l.web.WebsocketEmulationController     : Connection closed [sessionId=e3b0e3ba4b854394, user=<anonymous>, reason=page closed]
+-2025-12-31T11:46:29.703+08:00  INFO 86768 --- [SpringAopLearn] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+-2025-12-31T11:46:29.711+08:00  INFO 86768 --- [SpringAopLearn] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+-2025-12-31T11:46:35.365+08:00  INFO 7885 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 7885 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T11:46:35.366+08:00  INFO 7885 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T11:46:35.704+08:00  INFO 7885 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T11:46:35.710+08:00  INFO 7885 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T11:46:35.710+08:00  INFO 7885 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T11:46:35.741+08:00  INFO 7885 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T11:46:35.742+08:00  INFO 7885 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 362 ms
+-2025-12-31T11:46:35.901+08:00  INFO 7885 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T11:46:35.905+08:00  INFO 7885 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.734 seconds (process running for 0.888)
+-2025-12-31T11:49:09.251+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2025-12-31T11:49:09.252+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+-2025-12-31T11:49:09.265+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+-2025-12-31T11:49:09.282+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-1] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: getData
+-2025-12-31T11:49:09.283+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-1] c.example.springaop.service.DataService  : Executing getData() method...
+-2025-12-31T11:49:09.283+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-1] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: getData took 1 ms
+-2025-12-31T11:49:18.008+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-2] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: saveData
+-2025-12-31T11:49:18.008+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-2] c.example.springaop.service.DataService  : Executing saveData() method with args: mlsjdfasssss
+-2025-12-31T11:49:18.008+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-2] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: saveData took 0 ms
+-2025-12-31T17:26:54.293+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-4] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: getData
+-2025-12-31T17:26:54.294+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-4] c.example.springaop.service.DataService  : Executing getData() method...
+-2025-12-31T17:26:54.294+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-4] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: getData took 1 ms
+-2025-12-31T17:30:48.190+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-5] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: saveData
+-2025-12-31T17:30:48.192+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-5] c.example.springaop.service.DataService  : Executing saveData() method with args: mlaksjdflasjdflasjdflasjdflasjdf
+-2025-12-31T17:30:48.192+08:00  INFO 7885 --- [SpringAopLearn] [http-nio-8081-exec-5] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: saveData took 2 ms
+-2025-12-31T17:47:54.413+08:00  INFO 62204 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 62204 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T17:47:54.414+08:00  INFO 62204 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T17:47:54.741+08:00  INFO 62204 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T17:47:54.746+08:00  INFO 62204 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T17:47:54.746+08:00  INFO 62204 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T17:47:54.765+08:00  INFO 62204 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T17:47:54.765+08:00  INFO 62204 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 337 ms
+-2025-12-31T17:47:54.913+08:00  WARN 62204 --- [SpringAopLearn] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T17:47:54.919+08:00  INFO 62204 --- [SpringAopLearn] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T17:47:54.924+08:00 ERROR 62204 --- [SpringAopLearn] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T17:48:18.049+08:00  INFO 62676 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 62676 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T17:48:18.050+08:00  INFO 62676 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T17:48:18.445+08:00  INFO 62676 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T17:48:18.450+08:00  INFO 62676 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T17:48:18.450+08:00  INFO 62676 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T17:48:18.478+08:00  INFO 62676 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T17:48:18.478+08:00  INFO 62676 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 413 ms
+-2025-12-31T17:48:18.639+08:00  INFO 62676 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T17:48:18.643+08:00  INFO 62676 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.769 seconds (process running for 0.883)
+-2025-12-31T17:49:29.367+08:00  INFO 62676 --- [SpringAopLearn] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+-2025-12-31T17:49:29.387+08:00  INFO 62676 --- [SpringAopLearn] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+-2025-12-31T17:49:37.908+08:00  INFO 64330 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 64330 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T17:49:37.909+08:00  INFO 64330 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T17:49:38.248+08:00  INFO 64330 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T17:49:38.253+08:00  INFO 64330 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T17:49:38.254+08:00  INFO 64330 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T17:49:38.276+08:00  INFO 64330 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T17:49:38.277+08:00  INFO 64330 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+-2025-12-31T17:49:38.438+08:00  INFO 64330 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T17:49:38.442+08:00  INFO 64330 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.702 seconds (process running for 0.83)
+-2025-12-31T17:51:33.726+08:00  INFO 66081 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 66081 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T17:51:33.727+08:00  INFO 66081 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T17:51:34.032+08:00  INFO 66081 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T17:51:34.038+08:00  INFO 66081 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T17:51:34.039+08:00  INFO 66081 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T17:51:34.057+08:00  INFO 66081 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T17:51:34.057+08:00  INFO 66081 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 315 ms
+-2025-12-31T17:51:34.198+08:00  WARN 66081 --- [SpringAopLearn] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+-2025-12-31T17:51:34.204+08:00  INFO 66081 --- [SpringAopLearn] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+-2025-12-31T17:51:34.210+08:00 ERROR 66081 --- [SpringAopLearn] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+-2025-12-31T17:52:03.141+08:00  INFO 66773 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 66773 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+-2025-12-31T17:52:03.142+08:00  INFO 66773 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+-2025-12-31T17:52:03.478+08:00  INFO 66773 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+-2025-12-31T17:52:03.484+08:00  INFO 66773 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2025-12-31T17:52:03.484+08:00  INFO 66773 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+-2025-12-31T17:52:03.507+08:00  INFO 66773 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2025-12-31T17:52:03.507+08:00  INFO 66773 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 340 ms
+-2025-12-31T17:52:03.644+08:00  INFO 66773 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+-2025-12-31T17:52:03.648+08:00  INFO 66773 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.707 seconds (process running for 0.84)
+-2025-12-31T18:11:35.091+08:00  INFO 77342 --- [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 77342 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+2025-12-31T18:11:35.092+08:00  INFO 77342 --- [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-31T18:11:35.407+08:00  INFO 77342 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-12-31T18:11:35.412+08:00  INFO 77342 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-31T18:11:35.412+08:00  INFO 77342 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-31T18:11:35.429+08:00  INFO 77342 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-31T18:11:35.429+08:00  INFO 77342 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 323 ms
+2025-12-31T18:11:35.565+08:00  WARN 77342 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-12-31T18:11:35.570+08:00  INFO 77342 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-31T18:11:35.576+08:00 ERROR 77342 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-12-31T18:11:42.921+08:00  INFO 77681 --- [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 77681 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+2025-12-31T18:11:42.922+08:00  INFO 77681 --- [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-31T18:11:43.276+08:00  INFO 77681 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-12-31T18:11:43.282+08:00  INFO 77681 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-31T18:11:43.282+08:00  INFO 77681 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-31T18:11:43.308+08:00  INFO 77681 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-31T18:11:43.308+08:00  INFO 77681 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 371 ms
+2025-12-31T18:11:43.469+08:00  INFO 77681 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-12-31T18:11:43.473+08:00  INFO 77681 --- [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.725 seconds (process running for 0.836)
+2025-12-31T18:12:17.691+08:00  INFO 78383 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Starting SpringAopLearnApplication using Java 17.0.9 with PID 78383 (/Users/sam/Desktop/test/spring-aop/build/classes/java/main started by sam in /Users/sam/Desktop/test/spring-aop)
+2025-12-31T18:12:17.692+08:00  INFO 78383 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-12-31T18:12:18.038+08:00  INFO 78383 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-12-31T18:12:18.044+08:00  INFO 78383 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-12-31T18:12:18.045+08:00  INFO 78383 --- [SpringAopLearn] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-12-31T18:12:18.073+08:00  INFO 78383 --- [SpringAopLearn] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-12-31T18:12:18.073+08:00  INFO 78383 --- [SpringAopLearn] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 366 ms
+2025-12-31T18:12:18.228+08:00  INFO 78383 --- [SpringAopLearn] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-12-31T18:12:18.238+08:00  INFO 78383 --- [SpringAopLearn] [main] c.e.springaop.SpringAopLearnApplication  : Started SpringAopLearnApplication in 0.718 seconds (process running for 0.849)
+2025-12-31T18:13:37.639+08:00  INFO 78383 --- [SpringAopLearn] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-31T18:13:37.640+08:00  INFO 78383 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-12-31T18:13:37.642+08:00  INFO 78383 --- [SpringAopLearn] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-12-31T18:13:37.667+08:00  INFO 78383 --- [SpringAopLearn] [http-nio-8081-exec-1] c.e.springaop.aspect.LoggingAspect       : Around (Before) execution: getData
+2025-12-31T18:13:37.668+08:00  INFO 78383 --- [SpringAopLearn] [http-nio-8081-exec-1] c.example.springaop.service.DataService  : Executing getData() method...
+2025-12-31T18:13:37.668+08:00  INFO 78383 --- [SpringAopLearn] [http-nio-8081-exec-1] c.e.springaop.aspect.LoggingAspect       : Around (After) execution: getData took 2 ms
+2025-12-31T18:13:47.461+08:00  INFO 78383 --- [SpringAopLearn] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-31T18:13:47.468+08:00  INFO 78383 --- [SpringAopLearn] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
