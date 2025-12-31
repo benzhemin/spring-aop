@@ -23,10 +23,10 @@ scrape_configs:
       # Parse ISO 8601 timestamp and extract log level
       - regex:
           expression: '^(?P<timestamp>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[.\d+:-]*)?\s*(?P<level>INFO|WARN|ERROR|DEBUG|TRACE)?'
-      
+
       - labels:
           level:
-      
+
       - timestamp:
           source: timestamp
           format: RFC3339Nano
